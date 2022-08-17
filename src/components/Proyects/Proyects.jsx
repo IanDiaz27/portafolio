@@ -52,9 +52,9 @@ function Proyects() {
                 <a href={proyect.linkGit}>
                   <img src={git} className={style.imgLink} />
                 </a>
-                <a>
+                {/* <a>
                   <img src={world} className={style.imgLink} />
-                </a>
+                </a> */}
               </div>
             </div>
           ))}
