@@ -4,7 +4,7 @@ import poke from "../../img/LandingPage.jpeg";
 import weather from "../../img/Home.jpeg";
 import medi from "../../img/Mediconnect img.png";
 import git from "../../img/github-brands.svg";
-import world from "../../img/world.svg";
+// import world from "../../img/world.svg";
 
 import style from "./Proyects.module.css";
 
@@ -41,16 +41,20 @@ function Proyects() {
           <h1 className={style.title}>Proyectos</h1>
         </div>
         <div className={style.containerCards}>
-          {proyects.map((proyect) => (
-            <div className={style.card}>
+          {proyects.map((proyect, index) => (
+            <div className={style.card} key={index}>
               <div className={style.contain}>
-                <img src={proyect.img} className={style.img} />
+                <img
+                  src={proyect.img}
+                  className={style.img}
+                  alt={proyect.name}
+                />
                 <h1 className={style.name}>{proyect.name}</h1>
                 <p className={style.desc}>{proyect.resumen}</p>
               </div>
               <div>
                 <a href={proyect.linkGit}>
-                  <img src={git} className={style.imgLink} />
+                  <img src={git} className={style.imgLink} alt="GitHub" />
                 </a>
                 {/* <a>
                   <img src={world} className={style.imgLink} />

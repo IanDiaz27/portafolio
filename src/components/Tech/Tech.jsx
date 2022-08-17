@@ -89,8 +89,9 @@ function Tech() {
                     ? `${style.slide} ${style.activeSlide}`
                     : style.slide
                 }
+                key={index}
               >
-                <img className={style.circle} src={item.img} />
+                <img className={style.circle} src={item.img} alt={item.name} />
                 <h3 className={style.techName}>{item.name}</h3>
               </div>
             ))}
